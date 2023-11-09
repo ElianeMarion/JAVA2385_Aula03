@@ -15,5 +15,23 @@ public class Decisao {
         System.out.println("Digite a segunda nota do aluno: ");
         nota2 = leitor.nextDouble();
         media = (nota1 + nota2) / 2;
+        if(media >= 7)
+        {
+            System.out.println("Aluno promovido com média " + media);
+        }
+        else if(media < 4)
+        {
+            System.out.println("Aluno reprovado com média " + media);
+        }
+        else{ //if(media >= 4 && media < 7)
+            System.out.println("Aluno tem direito a fazer a prova de exame");
+            System.out.println("Digite a nota do exame: ");
+            notaExame = leitor.nextDouble();
+            novaMedia = (notaExame + media)/2;
+            if(novaMedia >= 5)
+                System.out.println("Aluno promovido em exame com média " + novaMedia);
+            else
+                System.out.println("Aluno retido após exame com média " + novaMedia);
+        }
     }
 }
